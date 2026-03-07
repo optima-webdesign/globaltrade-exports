@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+// Unused categories import removed
 import { 
   FiArrowRight, FiGlobe, FiShield, FiCheck, 
   FiAward, FiTrendingUp, FiStar, FiTruck, FiBox, FiLayers
@@ -16,10 +17,9 @@ export default function Home() {
 
   return (
     <div className="bg-[#f8fafc] min-h-screen font-sans text-slate-800 selection:bg-[#FF5B04] selection:text-white">
-      {/* Layout fix: pb-24 yahan se hata diya gaya hai */}
       
-      {/* 1. HERO SECTION */}
-      <section className="relative h-[85vh] min-h-160ex items-center justify-center px-6 lg:px-12 overflow-hidden">
+      {/* 1. HERO SECTION - Fixed the "uper jara hai" issue with proper pt (padding-top) and min-h */}
+      <section className="relative min-h-[85vh] flex items-center justify-center px-6 lg:px-12 overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/hero.png" 
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl relative z-10 flex flex-col items-center text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="max-w-4xl flex flex-col items-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              {/* Linter fix: h-[2px] ki jagah h-0.5 */}
+              {/* Fixed h-[2px] syntax */}
               <span className="h-0.5 w-8 sm:w-12 bg-[#FF5B04]"></span>
               <span className="text-white text-sm font-bold tracking-widest uppercase">
                 Premium Indian Exports
@@ -104,8 +104,8 @@ export default function Home() {
       <section className="py-24 px-6 bg-white border-t border-slate-100">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Linter fix: h-[550px] ki jagah min-h-[34rem] use kiya */}
-            <div className="relative min-h-136full rounded-2xl overflow-hidden">
+            {/* Using arbitrary min height here carefully */}
+            <div className="relative min-h-136 w-full rounded-2xl overflow-hidden">
               <Image src="/about.png" alt="Company Logistics" fill className="object-cover" />
               <div className="absolute bottom-6 left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
                 <FiAward className="text-[#FF5B04] text-3xl mb-3" />
@@ -238,8 +238,8 @@ export default function Home() {
           </div>
           
           <div className="relative">
-            {/* Linter fix: top-[40px] ki jagah top-10 */}
-            <div className="hidden md:block absolute top-10 left-[10%] w-[80%] h-px bg-slate-200 z-0"></div>
+            {/* Fixed top-[40px] and w-[80%] arbitrary classes to canonical tailwind classes */}
+            <div className="hidden md:block absolute top-10 left-[10%] w-4/5 h-px bg-slate-200 z-0"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {[
@@ -250,11 +250,11 @@ export default function Home() {
                 { n: "05", t: "Delivery", d: "Customs clearance & final handover." }
               ].map((step, i) => (
                 <div key={i} className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] text-[#075056] rounded-full flex items-center justify-center font-black text-xl mb-6 border border-white">
+                  <div className="w-20 h-20 bg-white shadow-xl text-[#075056] rounded-full flex items-center justify-center font-black text-xl mb-6 border border-white">
                     {step.n}
                   </div>
                   <h4 className="font-bold text-slate-900 mb-2">{step.t}</h4>
-                  {/* Linter fix: max-w-[160px] ki jagah max-w-40 */}
+                  {/* Fixed max-w-[160px] */}
                   <p className="text-[15px] text-slate-500 max-w-40 leading-relaxed">{step.d}</p>
                 </div>
               ))}

@@ -100,7 +100,7 @@ export const products: Product[] = [
     shortDesc: "Nutrient-dense, vibrant green Moringa powder.",
     description: "Shade-dried and finely milled organic Moringa Oleifera leaves. Retains maximum nutritional value, perfect for superfood blends, capsules, and health drinks.",
     specs: { "Origin": "Tamil Nadu, India", "Color": "Vibrant Green", "Mesh Size": "80-100 Mesh", "Packaging": "20kg Paper Kraft Bag" },
-    image: "/images/moringa.png ",
+    image: "/images/moringa.png",
     countries: ["UK", "USA", "Japan"]
   },
   // {
