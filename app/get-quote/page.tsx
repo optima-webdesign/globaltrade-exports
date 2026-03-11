@@ -63,7 +63,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 px-6 overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1494412519320-ce3dc724497e?q=80&w=2000&auto=format&fit=crop" 
+            src="/shipping-logistic.png" 
             alt="Shipping Logistics" 
             fill 
             className="object-cover opacity-20" 
@@ -84,8 +84,8 @@ export default function ContactPage() {
               <span className="h-0.5 w-8 bg-[#FF5B04]"></span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
-              Contact Varni <br/>
-              Exim <span className="text-[#FF5B04]">Enterprise.</span>
+              Contact Ghanshaym  <br/>
+              <span className="text-[#FF5B04]">Store.</span>
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
               We are here to assist you with your export inquiries. Whether you are looking for premium Indian products or a reliable export partner, our team is ready to help.

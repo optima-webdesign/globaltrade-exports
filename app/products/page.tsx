@@ -26,7 +26,7 @@ export default function ProductsPage() {
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 px-6 overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?q=80&w=2000&auto=format&fit=crop" 
+            src="/export-commodities.png" 
             alt="Export Commodities" 
             fill 
             className="object-cover opacity-20" 
